@@ -7,6 +7,8 @@ module RenderSync
         ::Pusher.app_id = RenderSync.app_id
         ::Pusher.key    = RenderSync.api_key
         ::Pusher.secret = RenderSync.auth_token
+        ::Pusher.cluster = 'ap1'
+        ::Pusher.encrypted = true
 
         if RenderSync.pusher_api_scheme
           ::Pusher.scheme = RenderSync.pusher_api_scheme
