@@ -132,6 +132,8 @@ class RenderSync.Pusher extends RenderSync.Adapter
     opts.wsHost = RenderSyncConfig.pusher_ws_host if RenderSyncConfig.pusher_ws_host
     opts.wsPort = RenderSyncConfig.pusher_ws_port if RenderSyncConfig.pusher_ws_port
     opts.wssPort = RenderSyncConfig.pusher_wss_port if RenderSyncConfig.pusher_wss_port
+    opts.cluster = 'ap1'
+    opts.encrypted = true
 
     @client = new window.Pusher(RenderSyncConfig.api_key, opts)
 
