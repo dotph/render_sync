@@ -135,7 +135,7 @@ class RenderSync.Pusher extends RenderSync.Adapter
     opts.cluster = 'ap1'
     opts.encrypted = true
 
-    @client = new window.Pusher(RenderSyncConfig.api_key, {cluster: 'ap1', encrypted: true})
+    @client = new window.Pusher(RenderSyncConfig.api_key, opts)
 
   isConnected: -> @client?.connection.state is "connected"
 
